@@ -15,9 +15,9 @@ namespace SECOND_TASK
 void main()
 {
 	int a = 0, b = 0;
-	std::cout << "Input a: ";
+	std::cout << "Enter a: ";
 	std::cin >> a;
-	std::cout << "Input b: ";
+	std::cout << "Enter b: ";
 	std::cin >> b;
 	if ((a > 0 && b > 0) || (a < 0 && b < 0))
 		std::cout << SECOND_TASK::MULT(abs(a), abs(b)) << std::endl;
