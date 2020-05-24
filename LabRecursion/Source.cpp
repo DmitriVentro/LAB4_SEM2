@@ -20,9 +20,9 @@ void main()
 	std::cout << "Enter b: ";
 	std::cin >> b;
 	if ((a > 0 && b > 0) || (a < 0 && b < 0))
-		std::cout << SECOND_TASK::MULT(abs(a), abs(b)) << std::endl;
+		std::cout << "Your multiplication: " << SECOND_TASK::MULT(abs(a), abs(b)) << std::endl;
 	else
-		std::cout << -(int)SECOND_TASK::MULT(abs(a), abs(b)) << std::endl;
+		std::cout << "Your multiplication: " << -(int)SECOND_TASK::MULT(abs(a), abs(b)) << std::endl;
 
 
 }
