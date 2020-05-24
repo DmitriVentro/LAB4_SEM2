@@ -1,28 +1,39 @@
 #include <iostream>
-#include <cmath>
-namespace SECOND_TASK
+
+
+int G(int n);
+int F(int n);
+
+int main()
 {
-	unsigned MULT(unsigned a, unsigned b)
-	{
-		if (a == 0 || b == 0)
-			return 0;
-		if (b < 1)
-			return a;
-		else
-			return a + MULT(a, --b);
-	}
+	
+	std::cout << "Numbers of F(n):" << std::endl;
+	for (int i = 1; i < 11; i++)
+		std::cout << F(i) << " ";
+
+	std::cout << std::endl;
+
+	
+	std::cout << std::endl << "Numbers of G(n)" << std::endl;
+	for (int i = 1; i < 11; i++)
+		std::cout << G(i) << " ";
+
 }
-void main()
+
+int F(int n)
 {
-	int a = 0, b = 0;
-	std::cout << "Enter a: ";
-	std::cin >> a;
-	std::cout << "Enter b: ";
-	std::cin >> b;
-	if ((a > 0 && b > 0) || (a < 0 && b < 0))
-		std::cout << "Your multiplication: " << SECOND_TASK::MULT(abs(a), abs(b)) << std::endl;
+	if (n == 1)
+		return 10;
 	else
-		std::cout << "Your multiplication: " << -(int)SECOND_TASK::MULT(abs(a), abs(b)) << std::endl;
-
-
+		return F(n - 1) + G(n - 1);
 }
+
+
+int G(int n)
+{
+	if (n == 1)
+		return -1;
+	else
+		return F(n - 1) + G(n - 1);
+}
+
