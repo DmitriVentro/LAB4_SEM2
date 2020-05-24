@@ -34,7 +34,7 @@ namespace FIRST_TASK
 	}
 
 }
-void main()
+int main()
 {
 	int SUM_UR = 0;
 	int SUM_WR = 0;
