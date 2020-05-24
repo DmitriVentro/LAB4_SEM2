@@ -12,7 +12,7 @@ namespace SECOND_TASK
 			return a + MULT(a, --b);
 	}
 }
-void main()
+int main()
 {
 	int a = 0, b = 0;
 	std::cout << "Enter a: ";
